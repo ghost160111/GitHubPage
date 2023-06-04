@@ -1,0 +1,109 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    background: rgb(27, 27, 27);
+}
+
+.header-wrapper {
+    max-width: 100%;
+}
+
+// DESKTOP NAVIGATION 
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.nav-list-left {
+    display: flex;
+    justify-content: left;
+}
+
+.nav-list-right {
+    display: flex;
+    flex-flow: row;
+    justify-content: right;
+    column-gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+}
+
+// MOBILE NAVIGATION
+
+.m-nav {
+    display: none;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+    }
+}
+
+.m-nav-left {
+    display: flex;
+}
+
+.m-nav-right {
+    display: flex;
+    flex-flow: column;
+}
+
+.m-nav-r-btn-on,
+.m-nav-r-btn-off {
+    all: unset;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+}
+
+.m-nav-r-btn-on {
+    display: block;
+}
+
+.m-nav-r-btn-off {
+    display: none;
+}
+
+.m-nav-r-list {
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+    position: fixed;
+    left: 0;
+    top: 77px;
+    
+    width: 100%;
+    height: 100%;
+    
+    background: black;
+    z-index: 10;
+    animation: nav-anim all 3s linear;
+    
+    li {
+        position: relative;
+        top: -100px;
+    }
+}
+
+@keyframes nav-anim {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
