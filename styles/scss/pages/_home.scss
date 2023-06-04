@@ -26,11 +26,52 @@
         @media screen and (max-width: 900px) {
             max-width: 100%;
             margin-right: 0;
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+    }
+
+    .article-com-2 {
+        a {
+            color: grey;
+
+            &:hover {
+                color: red;
+                text-decoration: underline;
+                transition: all 0.3s ease;
+            }
+
+            &:active {
+                filter: opacity(0.5);
+            }
+        }
+    }
+
+    iframe {
+        margin-top: 1rem;
+        display: flex;
+        width: 150%;
+        height: 600px;
+        
+        @media screen and (max-width: 1200px) {
+            width: 100%;
         }
     }
 
     @media screen and (max-width: 900px) {
         flex-flow: column;
         margin-top: 5rem;
+
+        .article-com-2 {
+            flex-flow: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        iframe {
+            width: 90%;
+            height: 700px;
+        }
     }
 }

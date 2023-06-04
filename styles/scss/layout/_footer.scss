@@ -1,5 +1,5 @@
 .footer {
-    margin-top: 9rem;
+    margin-top: 4rem;
     color: white;
     background: rgb(27, 27, 27);
     
@@ -9,6 +9,10 @@
         &:hover {
             text-decoration: none;
             transition: all 0.3s ease;
+        }
+
+        &:active {
+            filter: opacity(0.5);
         }
     }
 
@@ -31,6 +35,16 @@
 }
 
 .f-list-1 {
+    li {
+        a {
+            color: red;
+
+            &:hover {
+                color: blue;
+            }
+        }
+    }
+    
     hr {
         max-width: 90%;
     }
@@ -49,6 +63,29 @@
 
 .f-list-3 {
     display: flex;
+
+    li:nth-child(1) {
+        a {
+            img {
+                background: black;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    li:nth-child(2),
+    li:nth-child(3) {
+        a {
+            img {
+                background: white;
+                border-radius: 10px;
+            }
+
+            &:hover {
+                filter: opacity(0.7);
+            }
+        }
+    }
 }
 
 .f-list-1,

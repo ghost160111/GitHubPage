@@ -1,18 +1,45 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    & {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: var(--background-color);
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        & {
+            background: var(--scrollbar-color);
+        }
+
+        &:hover {
+            background: var(--scrollbar-hover);
+        }
+
+        &:active {
+            background: var(--scrollbar-active);
+        }
+    }
 }
 
 html {
     color: black;
-    
+
     font: {
         family: monospace;
         size: 1.2rem;
         style: normal;
         weight: 400;
     }
+
     @media screen and (max-width: 900px) {
         font-size: 1rem;
     }
@@ -28,6 +55,7 @@ html {
         font: {
             weight: 700;
         }
+
         @media screen and (max-width: 900px) {
             font-size: 2rem;
         }
@@ -46,12 +74,31 @@ html {
         }
     }
 
-    h1 { font-size: 2.6rem; visibility: hidden; position: absolute; }
-    h2 { font-size: 2.4rem; }
-    h3 { font-size: 2.2rem; }
-    h4 { font-size: 2.0rem; }
-    h5 { font-size: 1.8rem; }
-    h6 { font-size: 1.6rem; }
+    h1 {
+        font-size: 2.6rem;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
+
+    h4 {
+        font-size: 2.0rem;
+    }
+
+    h5 {
+        font-size: 1.8rem;
+    }
+
+    h6 {
+        font-size: 1.6rem;
+    }
 
     p {
         padding-top: 10px;
@@ -65,7 +112,7 @@ html {
             weight: 400;
         }
     }
-    
+
     ul,
     ol {
         list-style-type: none;
