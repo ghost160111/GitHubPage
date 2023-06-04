@@ -5,10 +5,16 @@
 }
 
 html {
+  color: black;
   font-family: monospace;
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 1rem;
+  }
 }
 html h1,
 html h2,
@@ -18,6 +24,13 @@ html h3 {
   margin-top: 0.1rem;
   margin-bottom: 0.1rem;
   font-weight: 700;
+}
+@media screen and (max-width: 900px) {
+  html h1,
+  html h2,
+  html h3 {
+    font-size: 2rem;
+  }
 }
 html h4,
 html h5,
@@ -72,6 +85,59 @@ html a:active {
   filter: opacity(0.7);
 }
 
+:root {
+  --background-color: #0d0d0d;
+  --basic-white: #ffffff;
+  --link-underline: #fec43e;
+  --header-background-color: #0D0D0D;
+  --black-font-color: #1d1d1b;
+  --scrollbar-color: rgb(63, 63, 63);
+  --scrollbar-hover: rgb(44, 44, 44);
+  --scrollbar-active: rgb(29, 29, 29);
+  --form-blur-effect-color: #a6875b;
+  --form-label-color: #9EA8AA;
+  --form-input-textarea-border: #696B6B;
+  --form-submit-background-color: #EBAB07;
+  --form-image-dropzone-back-color: #cccccc;
+  --form-image-dropzone-after-color: rgba(0, 0, 0, 0.75);
+  --home-container-1-top-block-back-color: #E64011;
+  --home-container-2-prize-amount-color-2: #FEBB1F;
+  --home-container-3-back-color-front: #009DF8;
+  --home-news-card-border-top-color: #3E4142;
+  --table-head-back-color: #1e1e1e;
+  --other-news-border-top-color: #626262;
+  --other-news-card__block-2__description: #A7A7A7;
+  --winners-tab-block-back-color: #181818;
+  --winners-tab__place: #2E2E34;
+  --winner-1-color: #57462d;
+  --winner-2-color: #162036;
+  --winner-3-color: #311D2C;
+  --custom-dropdown-color: #DDDDDD;
+  --font-size-144: 144px;
+  --font-size-128: 128px;
+  --font-size-120: 120px;
+  --font-size-112: 112px;
+  --font-size-96: 96px;
+  --font-size-64: 64px;
+  --font-size-48: 48px;
+  --font-size-40: 40px;
+  --font-size-36: 36px;
+  --font-size-32: 32px;
+  --font-size-24: 24px;
+  --font-size-20: 20px;
+  --font-size-18: 18px;
+  --font-size-16: 16px;
+  --font-size-14: 14px;
+  --font-size-12: 12px;
+  --font-weight-400: 400;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --padding-700: 0 calc(50% - 700px);
+  --padding-left-right-768: 24px;
+  --padding-left-right-375: 16px;
+  --form-page-padding: 0 calc(50% - 429px);
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -118,6 +184,9 @@ html a:active {
   align-items: center;
   justify-content: space-between;
   max-width: 100%;
+}
+.m-nav a {
+  color: white;
 }
 @media screen and (max-width: 768px) {
   .m-nav {
@@ -177,6 +246,105 @@ html a:active {
     height: 100%;
   }
 }
+.footer {
+  margin-top: 9rem;
+  color: white;
+  background: rgb(27, 27, 27);
+}
+.footer a {
+  text-decoration: underline;
+}
+.footer a:hover {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.footer li {
+  padding: 3px;
+}
+
+.footer-wrapper {
+  display: flex;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+@media screen and (max-width: 900px) {
+  .footer-wrapper {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
+
+.f-list-1 hr {
+  max-width: 90%;
+}
+
+.logo {
+  max-width: 35px;
+}
+
+.f-list-2 {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding-left: 10%;
+}
+
+.f-list-3 {
+  display: flex;
+}
+
+.f-list-1,
+.f-list-2,
+.f-list-3 {
+  min-width: 35%;
+}
+@media screen and (max-width: 900px) {
+  .f-list-1,
+  .f-list-2,
+  .f-list-3 {
+    width: auto;
+  }
+}
+
+.h-p-article {
+  display: flex;
+  justify-content: flex-start;
+}
+.h-p-article ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+.h-p-article .h-page-description {
+  padding: 1rem;
+  background: black;
+  color: white;
+  margin-bottom: 1rem;
+}
+.h-p-article .article-com-1 {
+  max-width: 40%;
+  margin-right: 10%;
+}
+@media screen and (max-width: 1200px) {
+  .h-p-article .article-com-1 {
+    max-width: 50%;
+    margin-right: 5%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .h-p-article .article-com-1 {
+    max-width: 100%;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .h-p-article {
+    flex-flow: column;
+    margin-top: 5rem;
+  }
+}
+
 .dev-page {
   height: 400px;
   background: white;
@@ -185,6 +353,11 @@ html a:active {
 
 .main {
   margin-top: 4rem;
+}
+
+section {
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,36 @@
+.h-p-article {
+    display: flex;
+    justify-content: flex-start;
+
+    ul {
+        list-style-type: disc;
+        padding-left: 2rem;
+    }
+
+    .h-page-description {
+        padding: 1rem;
+        background: black;
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    .article-com-1 {
+        max-width: 40%;
+        margin-right: 10%;
+
+        @media screen and (max-width: 1200px) {
+            max-width: 50%;
+            margin-right: 5%;
+        }
+
+        @media screen and (max-width: 900px) {
+            max-width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        flex-flow: column;
+        margin-top: 5rem;
+    }
+}
