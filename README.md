@@ -1,4 +1,3 @@
-# Perfect Blue Print of Burger Mobile Menu
+# My GitHub page
 
-This project shows the blue print code of the mobile burger menu and the code can be extended definitely.
-
+This is the test version of my GitHub page and will be changed by time.
