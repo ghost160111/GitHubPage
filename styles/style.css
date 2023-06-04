@@ -299,6 +299,11 @@ html a:active {
     padding-left: 3rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .footer-wrapper {
+    flex-flow: column;
+  }
+}
 
 .f-list-1 li a {
   color: red;
@@ -320,9 +325,19 @@ html a:active {
   justify-content: center;
   padding-left: 10%;
 }
+@media screen and (max-width: 600px) {
+  .f-list-2 {
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
 
 .f-list-3 {
   display: flex;
+}
+.f-list-3 li {
+  padding-left: 0.5rem;
 }
 .f-list-3 li:nth-child(1) a img {
   background: black;
